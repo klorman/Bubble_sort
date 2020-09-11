@@ -29,7 +29,7 @@ void print_sorted_array(int size_of_array, double* array) {
 int main() {
 	double* array;
 	int size_of_array = 0;
- 
+
 	std::cout << "Enter the size of the array: ";
 	std::cin >> size_of_array;
 
@@ -38,7 +38,7 @@ int main() {
 		return 0;
 	}
 
-	array = (double*)calloc(size_of_array, sizeof(double));
+	array = new double[size_of_array];
 
 	get_array(size_of_array, array);
 
@@ -46,6 +46,6 @@ int main() {
 
 	print_sorted_array(size_of_array, array);
 
-	free(array);
+	delete[] array;
 	return 0;
 }
