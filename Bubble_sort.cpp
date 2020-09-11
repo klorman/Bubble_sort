@@ -35,7 +35,7 @@ int main() {
 
 	if (size_of_array <= 0) {
 		std::cout << "Invalid size" << std::endl;
-		exit(1);
+		return 0;
 	}
 
 	array = (double*)calloc(size_of_array, sizeof(double));
